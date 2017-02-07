@@ -24,12 +24,7 @@
     @show
 </head>
 <body>
-    <div id="app">
-        <div class="container">
-            @section('top')
-                <h4 align="center"> <strong>{{ date('l jS \of F Y h:i:s A') }}</strong> </h4>
-            @show
-        </div>
+    
         
         @include('partials.nav')
         <div class="container">
@@ -39,6 +34,12 @@
 
                 </h1>
             </div>
+        </div>
+        <div id="app">
+        <div class="container">
+            @section('top')
+                <h4 align="center"> <strong>{{ date('l jS \of F Y h:i:s A') }}</strong> </h4>
+            @show
         </div>
     
         <div class="container">

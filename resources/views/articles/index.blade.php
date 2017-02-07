@@ -1,9 +1,5 @@
 @extends('layouts.app')
 
-@section('menu')
-<li><a href="{{ url('/home') }}">Dashboard</a></li>
-@stop 
-
 @section('header')
 <i class="glyphicon glyphicon-align-justify"></i> All Articles 
 @stop 
@@ -17,7 +13,9 @@
 @foreach ($articles->chunk(2) as $chunk)
 <div class="row">
 	@foreach ($chunk as $article)
+	@if($chunk->count() > 1)
 	<div class="col-xs-6">
+	@endif
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<strong><h1 align="center">{{ $article->title }}</h1></strong>

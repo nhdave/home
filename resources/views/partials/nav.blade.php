@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-static-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -20,7 +20,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         @section('menu')
-                        &nbsp;
+                        @if (Auth::guest())
+                          &nbsp;
+                        @else
+                          <li><a href="{{ url('/home') }}">Dashboard</a></li>
+                          <li><a href="{{ url('/categories') }}">Categories</a></li>
+                          <li><a href="{{ url('/articles') }}">Articles</a></li>
+                        @endif
                         @show
                     </ul>
 
