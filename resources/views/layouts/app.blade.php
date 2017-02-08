@@ -13,6 +13,7 @@
     <!-- Styles -->
     @section('styles')
         @include('partials.slate')
+        
     @show
     <!-- Scripts -->
     @section('scripts')
